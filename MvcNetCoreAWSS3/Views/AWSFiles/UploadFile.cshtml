@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Subir archivo a S3";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">📤 Subir nuevo archivo a AWS S3</h2>
+
+    <form asp-action="UploadFile" enctype="multipart/form-data" method="post" class="shadow p-4 rounded bg-light">
+        <div class="mb-3">
+            <label for="file" class="form-label">Selecciona un archivo</label>
+            <input type="file" name="file" id="file" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">⬆️ Subir archivo</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary ms-2">🔙 Volver al listado</a>
+    </form>
+</div>
